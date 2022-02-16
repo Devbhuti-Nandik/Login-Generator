@@ -1,0 +1,10 @@
+.outerbar{
+    text-align: center;
+    
+}
+
+@media screen and (max-width: 699px) {
+    .outerbar{
+        height: '10rem' !important;
+    }
+  }

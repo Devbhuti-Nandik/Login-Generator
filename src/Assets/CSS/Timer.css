@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+
+:root {
+  --mainBlue: #6bcfcf;
+  --mainBlack: #111111;
+  --mainWhite: #ffffff;
+  --mainGrey: #808080;
+  --mainRed: #ff9248;
+  --maxSpacing: 1rem;
+  --minSpacing: 3px;
+}
+
+.circle {
+  background-color: var(--mainBlack);
+  min-height: 60vh;
+  min-width: 29vw;
+  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 0px 6px rgb(226, 253, 252),
+    0px 0px 16px 12px rgb(123, 194, 192);
+  z-index: 5;
+}
+.circle__animation {
+  animation-name: spin;
+  animation-duration: 3500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  top: 20%;
+  left: 35%;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.8s, opacity 0.8s linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.circle__image {
+  text-align: center;
+}
+.image {
+  width: 90px;
+  height: 90px;
+  margin-top: 15%;
+}
+.circle__input {
+  text-align: center;
+  margin-top: 4%;
+}
+.circle__input label {
+  color: var(--mainWhite);
+  display: block;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-family: 500;
+  font-size: 0.8rem;
+}
+.circle__input input {
+  padding: 4.5%;
+  width: 70%;
+  background-color: transparent;
+  border: 1px solid rgb(186, 252, 249);
+  margin-top: 1.5%;
+  color: var(--mainBlue);
+  font-size: 1.5rem;
+  letter-spacing: var(--maxSpacing);
+}
+.circle__btn {
+  text-align: center;
+  margin-top: 10%;
+}
+.circle__btn button {
+  padding: 3.5%;
+  width: 45%;
+  background-color: var(--mainBlue);
+  border: none;
+  color: var(--mainBlack);
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.7rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.timer__main {
+  position: absolute;
+  top: 65%;
+  left: 75%;
+  text-align: center;
+}
+.timer h1,
+h5 {
+  color: var(--mainBlue);
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+.timer h5 {
+  font-size: 1rem;
+  color: var(--mainGrey);
+}
+.progressbar {
+  text-align: center;
+  margin-left: 30%;
+  margin-bottom: 5%;
+}
+
+.exit__main {
+  position: absolute;
+  top: 85%;
+  left: 79%;
+  text-align: center;
+  width: 5%;
+}
+.exit__main button {
+  width: 100%;
+  background-color: var(--mainRed);
+  border: none;
+  border-radius: 5px;
+  padding: 8%;
+  color: var(--mainBlack);
+  letter-spacing: var(--minSpacing);
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .circle {
+    min-height: 45vh;
+    min-width: 30vw;
+  }
+  .circle__btn {
+    margin-top: 5%;
+  }
+  .circle__btn button {
+    font-size: 1rem;
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .circle {
+    min-height: 45vh;
+    min-width: 30vw;
+  }
+  .circle__btn {
+    margin-top: 5%;
+  }
+  .circle__btn button {
+    font-size: 1rem;
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .circle {
+    min-height: 45vh;
+    min-width: 40vw;
+  }
+  .circle__btn {
+    margin-top: 5%;
+  }
+  .circle__btn button {
+    font-size: 1rem;
+    width: 35%;
+  }
+  .progressbar {
+    margin-bottom: 30%;
+  }
+}
